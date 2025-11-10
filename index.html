@@ -1,0 +1,122 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StyleMate - Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #87cefa, #1e3c72);
+        /* Sky blue → Dark blue */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .home-container {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.92);
+        padding: 60px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        max-width: 800px;
+        /* Increased from 500px */
+        width: 95%;
+        /* Adjusted for responsiveness */
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .home-container h1 {
+        font-size: 3rem;
+        color: #1e3c72;
+        /* Dark Blue */
+        margin-bottom: 20px;
+      }
+
+      .home-container p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      .btn {
+        padding: 12px 30px;
+        margin: 10px;
+        border-radius: 30px;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn-login {
+        background: #1e3c72;
+        /* Dark Blue */
+        color: white;
+        font-weight: bold;
+      }
+
+      .btn-login:hover {
+        background: #14284d;
+        /* Darker shade */
+        transform: scale(1.05);
+      }
+
+      .btn-register {
+        background: #fff;
+        color: #1e3c72;
+        border: 2px solid #1e3c72;
+        font-weight: bold;
+      }
+
+      .btn-register:hover {
+        background: #e6f0ff;
+        transform: scale(1.05);
+      }
+
+      /* Fade-in animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="home-container">
+      <h1>Welcome to StyleMate ChatBot ✨</h1>
+      <p>
+        Your ultimate fashion & skincare idea assistant. Discover outfit ideas,
+        skincare tips, and more!
+      </p>
+      <div>
+        <button class="btn btn-login" onclick="goNext()">Login</button>
+        <button class="btn btn-register" onclick="goNext()">Register</button>
+      </div>
+    </div>
+
+    <script>
+      const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+      // If user is already logged in, redirect to chatbot
+      if (currentUser) {
+        window.location.href = "chatbot.html";
+      }
+      function goNext() {
+        window.location.href = "login.html";
+      }
+    </script>
+  </body>
+</html>

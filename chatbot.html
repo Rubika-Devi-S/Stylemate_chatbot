@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>StyleMate Chatbot</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">SM</div>
+      <div>
+        <h1>StyleMate</h1>
+        <p class="lead">Your AI Fashion & Skincare Buddy</p>
+      </div>
+      <button id="logoutBtn" class="logout-btn">Logout</button
+      ><button id="clearBtn" class="clear-btn">🧹 Clear Chat</button>
+    </header>
+
+    <div id="app" class="app hidden">
+      <div class="panel left">
+        <header>
+          <div class="logo">SM</div>
+          <div>
+            <h1>StyleMate</h1>
+            <p class="lead">Your AI Fashion & Skincare Buddy</p>
+          </div>
+        </header>
+        <div class="suggestions">
+          <div class="search">
+            <input id="searchInput" placeholder="Search tips..." />
+          </div>
+          <div id="suggList" class="suggest-list"></div>
+        </div>
+      </div>
+      <div class="panel right">
+        <div class="chat-area">
+          <div id="messages" class="messages"></div>
+          <div class="controls">
+            <input id="userInput" placeholder="Ask StyleMate..." />
+            <button id="sendBtn">Send</button>
+          </div>
+        </div>
+        <footer class="small">
+          💡 Fashion + Skincare tips at your fingertips!
+        </footer>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
